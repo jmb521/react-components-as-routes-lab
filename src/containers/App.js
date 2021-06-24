@@ -10,11 +10,17 @@ import Directors from '../components/Directors';
 import Movies from '../components/Movies';
 
 
-const App = (props) => {
+const App = () => {
   return (
-    <Router>
-      {/*{code here}*/}
-    </Router>
+    
+      <div>
+        <NavBar />
+        <Route  path="/" component={Home} />
+        <Route path="/actors" component={Actors} />
+        <Route exact path="/directors" component={Directors} />
+        <Route exact path="/movies" component={Movies} />
+      </div>
+    
   );
 };
 
